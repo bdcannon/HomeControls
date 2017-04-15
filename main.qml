@@ -25,20 +25,22 @@ ApplicationWindow {
         id:homeView
         anchors.centerIn: parent
         visible:false
+        onViewSelected: {
+            if(cmdName == "sl")
+                mainView.push(lightControlView);
+        }
     }
     LightControlView{
         id:lightControlView
+        onBackPressed :{
+            console.log("Trying to pop");
+            mainView.pop()
+        }
     }
 
     StackView{
-        anchors.horizontalCenter: parent.horizontalCenter
         id:mainView
-        initialItem: lightControlView
+        anchors.horizontalCenter: parent.horizontalCenter
+        initialItem: homeView
     }
-//    Rectangle{
-//        height:50
-//        width:100
-//        color:"blue"
-//        anchors.centerIn: parent
-//    }
 }

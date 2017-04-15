@@ -3,8 +3,12 @@ import QtQuick.Controls 1.2
 
 Rectangle{
     property int maxBarHeight: parent.height * .9
-    HomeMenuButton{
+    signal backPressed
 
+    HomeMenuButton{
+        buttonLabel: "Back"
+        commandName: "back"
+        onButtonPressed: backPressed()
     }
 
     Rectangle{
@@ -42,7 +46,7 @@ Rectangle{
 
         function updateBar(){
             barMeter.height = maxBarHeight * value;
-            console.log(value);
+//            console.log(value);
         }
     }
 }
