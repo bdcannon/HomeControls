@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>HomeView.qml</file>
+        <file>HomeMenuButton.qml</file>
+        <file>LightControlView.qml</file>
+    </qresource>
+</RCC>
