@@ -23,6 +23,14 @@ Rectangle{
             commandName: "by"
         }
 
+        RelayControlButton{
+            id:lightRelayControl
+            buttonLabel: "Living Room Light"
+            commandName: "lvRmLght"
+            relayAddress: "relaycontrol.local"
+            relayNumber:0
+        }
+
         Component.onCompleted: {
             byViewButton.buttonPressed.connect(menuHandler);
             slViewButton.buttonPressed.connect(menuHandler)

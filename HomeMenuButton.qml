@@ -4,6 +4,8 @@ Rectangle{
     property string buttonLabel : "Button"
     property string commandName: "cmd"
     signal buttonPressed(string cmdName)
+    signal buttonRelease()
+
     border.width : 2
     height:50
     width : 150
@@ -16,6 +18,7 @@ Rectangle{
     MultiPointTouchArea{
         anchors.fill : parent
         onPressed: buttonPresed()
+        onReleased: buttonRelease()
 
         function buttonPresed(){
             console.log("Button: " + commandName);

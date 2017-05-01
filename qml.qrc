@@ -4,5 +4,6 @@
         <file>HomeView.qml</file>
         <file>HomeMenuButton.qml</file>
         <file>LightControlView.qml</file>
+        <file>RelayControlButton.qml</file>
     </qresource>
 </RCC>
